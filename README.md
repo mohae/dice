@@ -1,5 +1,6 @@
 dice
 ====
+[![Build Status](https://travis-ci.org/mohae/dice.png)](https://travis-ci.org/mohae/dice)
 
 Dice is a package for die or dice generation.  Specify the number of sides of a die; for more than one die, specify the dice quantity.
 
