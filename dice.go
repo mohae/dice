@@ -11,9 +11,9 @@ type Die struct {
 	sides int64
 }
 
-// New returns a Die with i sides.
-func New(i int) Die {
-	return Die{int64(i)}
+// New returns a Die with n sides.
+func New(n int) Die {
+	return Die{int64(n)}
 }
 
 // Roll rolls the die. It returns either the roll results or an error.
