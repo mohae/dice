@@ -1,3 +1,6 @@
+// Roll is an example CLI die app that rolls a die n times where n is a number
+// passed to the application as an arg.  By default roll uses a 6 sided die.
+// This can be changed using the -sides flag.
 package main
 
 import (
