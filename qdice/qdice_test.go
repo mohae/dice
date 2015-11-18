@@ -1,4 +1,4 @@
-package quick
+package qdice
 
 import (
 	"math/rand"

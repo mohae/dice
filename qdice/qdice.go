@@ -1,7 +1,8 @@
-// Package quick provides a non-CSPRNG die.  Rolling this die is much quicker
-// than the CSPRNG based die and does not generate garbage.  Odds are the
-// crypto/rand based die should be used.
-package quick
+// Package qdice provides non-CSPRNG dice.  Rolling this die is much quicker
+// than the CSPRNG based die and does not generate garbage.
+//
+// The random number generator needs to be seeded.
+package qdice
 
 import (
 	"math/rand"
@@ -14,8 +15,8 @@ type Die struct {
 }
 
 // New returns a n-sided die.
-func New(i int) Die {
-	return Die{i}
+func New(n int) Die {
+	return Die{n}
 }
 
 // Roll returns the result of a die roll. This is not CSPRNG.  Seeding of
