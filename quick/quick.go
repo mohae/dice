@@ -2,7 +2,7 @@
 // than the CSPRNG based die and does not generate garbage.
 //
 // The random number generator needs to be seeded.
-package qdice
+package quick
 
 import (
 	"math/rand"
