@@ -1,10 +1,10 @@
 dice
 ====
-[![Build Status](https://travis-ci.org/mohae/dice.png)](https://travis-ci.org/mohae/dice)
+[![GoDoc](https://godoc.org/github.com/mohae/json2go?status.svg)](https://godoc.org/github.com/mohae/dice)[![Build Status](https://travis-ci.org/mohae/dice.png)](https://travis-ci.org/mohae/dice)
 
 Dice is a package for die or dice generation.  Specify the number of sides of a die; for more than one die, specify the dice quantity.
 
-The dice roll is done using `crypto/rand`.  There is a `math/rand` implementation under `github.com/mohae/dice/quick`. This is mostly for testability, but may be used if a CSPRNG isn't necessary for your use case.
+The dice roll is done using `crypto/rand`.  There is a [PCG](http://www.pcg-random.org/) based PRNG implementation under `github.com/mohae/dice/quick`. This is mostly for testability, but may be used if a CSPRNG isn't necessary for your use case.
 
 An example program is in the `dice/roll` directory.
 
@@ -26,22 +26,22 @@ Roll is the example cli app. It accepts a `-sides` flag that tells it how many s
 
 If `-sides` isn't used, the die will default to 6 sides. If the number of rolls isn't passed, the die will only be rolled once. The number of rolls must be a valid number.
 
-In the `roll` directory:
+If you don't have the repo in your GOPATH:
 
-    go build
+	go install github.com/mohae/dice/roll
 
-    ./roll 
+Or in the `roll` directory:
 
+    go install
+
+Run `roll`:
+    roll
     5
 
-or 
-
-    ./roll 3
+	roll 3
     4
     1
     5
 
-or 
-
-    ./roll -sides=20
+    roll -sides=20
     14
